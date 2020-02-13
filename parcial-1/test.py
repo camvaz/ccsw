@@ -39,6 +39,19 @@ class StratsTests(unittest.TestCase):
 
     def testNumsBetween1And10(self):
         self.assertFalse(self.strat.prueba_10('Queen, 11, Metallica, 18, Doors, -8, Nirvana, -7, Guns and Roses, 6, Caifanes, 5'))
+
+    def testNumsNotNegative(self):
+        self.assertFalse(self.strat.prueba_11('Queen, 11, Metallica, 18, Doors, -8, Nirvana, -7, Guns and Roses, 6, Caifanes, 5'))
+
+    def testNumsinValues(self):
+        self.assertEqual(0, self.strat.prueba_12('Queen, Metallica, Doors, Nirvana, Guns and Roses'))
+
+    def testStringsInValues(self):
+        self.assertEqual(6, self.strat.prueba_13('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+
+    def testStringsLessThan50Chars(self):
+        self.assertTrue(self.strat.prueba_14('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+
 if __name__ == '__main__':
     unittest.main()
     

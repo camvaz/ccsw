@@ -6,6 +6,7 @@ class Strats:
         self.date = datetime.date.today()
         self.name = f"\n\t#  Codigo de metodos de prueba para el primer parcial de Control y Calidad de Software\n\n'\
                      + Fecha: {self.date} \t Nombre: Victor Manuel Campos Vazquez"
+        self.maxCharLength = 50
 
     def prueba_1(self, stringToTest: str):
         return stringToTest.split(', ')
@@ -90,7 +91,24 @@ class Strats:
                 return False
         return True
 
+    def prueba_11(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', '))
+        for i in numbers:
+            if i <= 0:
+                return False
+        return True
+    
+    def prueba_12(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', '))
+        return len(numbers)
 
+    def prueba_13(self, stringToTest: str):
+        strings = Utils.getStringsFromList(stringToTest.split(', '))
+        return len(strings)
+
+    def prueba_14(self, stringToTest: str):
+        strings = Utils.getStringsFromList(stringToTest.split(', '))
+        return list(filter(lambda x: len(x) <= self.maxCharLength, strings)) == strings
     #=== PLAYGROUND
 
     # def prueba_3(self, stringToTest: str):
@@ -107,12 +125,6 @@ class Strats:
     #     return
     # def prueba_3(self, stringToTest: str):
     #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
 
 # strat = Strats()
-# print(strat.prueba_5('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+# print(strat.prueba_14('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
