@@ -8,7 +8,7 @@ class Strats:
         self.name = f"\n\t#  Codigo de metodos de prueba para el primer parcial de Control y Calidad de Software\n\n'\
                      + Fecha: {self.date} \t Nombre: Victor Manuel Campos Vazquez"
         self.maxCharLength = 50
-        self.intSizePython = 28
+        self.intSizePython = sys.getsizeof(int('1')) 
 
     def prueba_1(self, stringToTest: str):
         return stringToTest.split(', ')
