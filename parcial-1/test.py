@@ -52,6 +52,24 @@ class StratsTests(unittest.TestCase):
     def testStringsLessThan50Chars(self):
         self.assertTrue(self.strat.prueba_14('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
 
+    def testStringsMoreThan50Chars(self):
+        self.assertTrue(self.strat.prueba_15('Queeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeen, 10'))
+    
+    def testNoFloatingNumbers(self):
+        self.assertFalse(self.strat.prueba_16('Queen, 10.1, Metallica, 8, Doors, 8, Nirvana, 7.9, Guns and Roses, 6.1, Caifanes, 5.2'))
+    
+    def testNoRepeatedStrings(self):
+        self.assertFalse(self.strat.prueba_17('Queen, 10, Queen, 10, Queen, 10, Queen, 10, Queen, 10'))
+    
+    def testStringsStartWithUpper(self):
+        self.assertFalse(self.strat.prueba_18('queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+
+    def testNumberAsDigit(self):
+        self.assertFalse(self.strat.prueba_19('Queen, ten, Metallica, 9, Doors, eight'))
+
+    def testNumbersCorrectSize(self):
+        self.assertTrue(self.strat.prueba_20('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+        
 if __name__ == '__main__':
     unittest.main()
     

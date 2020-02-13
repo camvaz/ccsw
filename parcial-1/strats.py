@@ -1,3 +1,4 @@
+import sys
 import datetime
 from utils import Utils
 
@@ -7,6 +8,7 @@ class Strats:
         self.name = f"\n\t#  Codigo de metodos de prueba para el primer parcial de Control y Calidad de Software\n\n'\
                      + Fecha: {self.date} \t Nombre: Victor Manuel Campos Vazquez"
         self.maxCharLength = 50
+        self.intSizePython = 28
 
     def prueba_1(self, stringToTest: str):
         return stringToTest.split(', ')
@@ -109,20 +111,47 @@ class Strats:
     def prueba_14(self, stringToTest: str):
         strings = Utils.getStringsFromList(stringToTest.split(', '))
         return list(filter(lambda x: len(x) <= self.maxCharLength, strings)) == strings
+
+    def prueba_15(self, stringToTest: str):
+        strings = Utils.getStringsFromList(stringToTest.split(', '))
+        return list(filter(lambda x: len(x) >= self.maxCharLength, strings)) == strings
+
+    def prueba_16(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', '))
+        return len(numbers) == len(stringToTest.split(', '))/2
+    
+    def prueba_17(self, stringToTest: str):
+        strings = Utils.getStringsFromList(stringToTest.split(', '))
+        count: int
+        for i in strings:
+            count = 0
+            for j in strings:
+                if i == j:
+                    count +=1
+                if count == 2:
+                    return False
+
+        return True
+
+    def prueba_18(self, stringToTest: str):
+        strings = Utils.getStringsFromList(stringToTest.split(', '))
+        for i in strings:
+            if i[0].islower():
+                return False
+        
+        return True
+
+    def prueba_19(self, stringToTest: str):
+        numbers = Utils.getStringsFromList(stringToTest.split(', '))
+        return numbers == len(stringToTest.split(', '))/2
+    
+    def prueba_20(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', '))
+        sysnums = list(filter(lambda x: sys.getsizeof(x) == self.intSizePython,numbers))
+        return len(sysnums) == len(numbers)
+
     #=== PLAYGROUND
 
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
     # def prueba_3(self, stringToTest: str):
     #     return
 

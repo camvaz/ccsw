@@ -1,3 +1,6 @@
+#=== TEST EXAMPLE WITH DOG CLASS
+import unittest
+
 class Dog:
     def __init__(self):
         self.name = "afea"
@@ -6,18 +9,13 @@ class Dog:
         return 'wof!'
 
 
-#=== TEST EXAMPLE WITH DOG CLASS
+class TestDog(unittest.TestCase):
+    def setUp(self):
+        self.dog = Dog()
 
-# import unittest
-# from dog import Dog
-
-# class TestDog(unittest.TestCase):
-#     def setUp(self):
-#         self.dog = Dog()
-
-#     def test_upper(self):
-#         self.assertEqual('wof!', self.dog.bark())
+    def test_upper(self):
+        self.assertEqual('wof!', self.dog.bark())
 
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
