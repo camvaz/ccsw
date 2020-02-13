@@ -1,4 +1,5 @@
 import datetime
+from utils import Utils
 
 class Strats:
     def __init__(self):
@@ -19,16 +20,7 @@ class Strats:
         return len(stringToTest.split(', ')) / 2
 
     def prueba_5(self, stringToTest: str):
-        values = stringToTest.split(', ')
-        numbers = []
-
-        # Obtenemos datos int:
-        for i in values:
-            try:
-                numbers.append(int(i))
-            except ValueError:
-                pass
-
+        numbers = Utils.getIntsFromList(stringToTest.split(', ')) 
         sortedList = numbers[:]
         sortedList.sort(reverse=True)
         
@@ -54,20 +46,53 @@ class Strats:
 
         return True
                               
+    def prueba_7(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', ')) 
+
+        for i in numbers:
+            for j in numbers:
+                if i == j:
+                    return False
+        return True
+    
+    def prueba_8(self, stringToTest: str):
+        values = stringToTest.split(', ')
+        index = 0
+
+        for i in values:
+            try:
+                int(i)
+                if(index % 2 == 0):
+                    return False
+            except ValueError:
+                pass
+            index+=1
+
+        return True
                               
-                              
+    def prueba_9(self, stringToTest: str):
+        values = stringToTest.split(', ')
+        for val in values:
+            for char in val:
+                # Check for ascii values
+                if (ord(char) >= 65 and ord(char) <= 90) or\
+                    (ord(char) >= 97 and ord(char) <= 122) or\
+                    (ord(char) >= 48 and ord(char) <= 57):
+                    pass
+                else:
+                    return False
+        return True
+    
+    def prueba_10(self, stringToTest: str):
+        numbers = Utils.getIntsFromList(stringToTest.split(', '))
+        for i in numbers:
+            if i >= 10 or i <= 1:
+                return False
+        return True
+
 
     #=== PLAYGROUND
 
-
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
-    # def prueba_3(self, stringToTest: str):
-    #     return
     # def prueba_3(self, stringToTest: str):
     #     return
     # def prueba_3(self, stringToTest: str):

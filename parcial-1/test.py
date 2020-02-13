@@ -28,9 +28,17 @@ class StratsTests(unittest.TestCase):
     def testDataInPlace(self):
         self.assertFalse(self.strat.prueba_6('10, Queen, 9, Metallica, 7, Nirvana'))
 
+    def testSameNumbers(self):
+        self.assertFalse(self.strat.prueba_7('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
+
+    def testDataFormat(self):
+        self.assertFalse(self.strat.prueba_6('10, 0.1, 9, 0.3, 7, 0.4'))
     
+    def testAlphanumericValues(self):
+        self.assertFalse(self.strat.prueba_9('A$AP ROCKY, 10, $ign, 9'))
 
-
+    def testNumsBetween1And10(self):
+        self.assertFalse(self.strat.prueba_10('Queen, 11, Metallica, 18, Doors, -8, Nirvana, -7, Guns and Roses, 6, Caifanes, 5'))
 if __name__ == '__main__':
     unittest.main()
     
