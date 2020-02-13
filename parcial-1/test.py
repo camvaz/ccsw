@@ -25,7 +25,10 @@ class StratsTests(unittest.TestCase):
     def testOrderedNumbers(self):
         self.assertTrue(self.strat.prueba_5('Queen, 10, Metallica, 8, Doors, 8, Nirvana, 7, Guns and Roses, 6, Caifanes, 5'))
 
+    def testDataInPlace(self):
+        self.assertFalse(self.strat.prueba_6('10, Queen, 9, Metallica, 7, Nirvana'))
 
+    
 
 
 if __name__ == '__main__':

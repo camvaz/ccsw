@@ -35,16 +35,30 @@ class Strats:
         # Comparamos original con ordenada
         return sortedList == numbers
 
-    
+    def prueba_6(self, stringToTest: str):
+        values = stringToTest.split(', ')
+        index = 0
 
+        # Revisa que sean convertibles a int,
+        # si lo son y el indice es par retorna false
+        for i in values:
+            try:
+                int(i)
+                if(index % 2 == 0):
+                    return False
+                
+            except ValueError:
+                pass
+            
+            index+=1
+
+        return True
                               
                               
                               
 
     #=== PLAYGROUND
 
-    # def prueba_3(self, stringToTest: str):
-    #     return
 
     # def prueba_3(self, stringToTest: str):
     #     return
