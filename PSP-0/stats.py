@@ -14,4 +14,4 @@ class Stats:
         return sum([pow(i - mean,2) for i in self.x])
 
     def standardDeviation(self):
-        return math.sqrt(self.sumVariation() / (len(self.x) - 1))
+        return round(math.sqrt(self.sumVariation() / (len(self.x) - 1)),2)
