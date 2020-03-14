@@ -1,6 +1,9 @@
 import pandas as pd
+import sys
 from pandas import DataFrame
-from models.Set import Set
+
+sys.path.insert(1, "./models")
+import Set
 
 class FileIO:
     namespace: str
@@ -11,7 +14,7 @@ class FileIO:
         self.namespace = _namespace
     
     def read(self, fileName: str) -> DataFrame:
-        self.data = pd.read_csv(f"{self.namespace}/{fileName}")
+        return pd.read_csv(f"{self.namespace}/{fileName}")
     
-    def write(self, fileName: str) -> DataFrame:
-        self.data = pd.read_csv(f"{self.namespace}/{fileName}")
+    def write(self, fileName: str, set: Set) -> DataFrame:
+        return set.returnSet().to_csv(f"{self.namespace}/{fileName}",index=False);
