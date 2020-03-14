@@ -5,5 +5,5 @@ Software Control and Quality repo
 Code directory for the implemented tests of the first partial exam in the semester.
 In order to run the tests <b>Python 3</b> is required. Run the file test.py in order to run the unttests
 
-### PSP-0
-Code directory for the implemented tests of the PSP-0 manual. This directory tests out Stats class that implements methods to solve the standard deviation.
+### PSP
+Code directory for the implemented tests of the PSP assignment. Class diagram is available at https://www.lucidchart.com/invitations/accept/91f49a45-eb43-4d72-95ab-37637dcb7fc7
