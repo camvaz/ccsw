@@ -6,7 +6,6 @@ Code directory for the implemented tests of the first partial exam in the semest
 In order to run the tests <b>Python 3</b> is required. Run the file test.py in order to run the unttests
 
 ## PSP
-======
 
 Code directory for the implemented tests of the PSP assignment. In order to run each program, ```pandas``` is required. I order to install it, execute the following command:
 
