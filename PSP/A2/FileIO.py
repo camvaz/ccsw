@@ -9,15 +9,16 @@ class FileIO:
     namespace: str
     file: str
 
-    def __init__(self, _namespace: str):
+    def __init__(self, _namespace: str = ""):
         # Constructor que recibe el namespace donde vamos a almacenar los csv
         super().__init__()
         self.namespace = _namespace
     
     def read(self, fileName: str) -> DataFrame:
         # Leemos csvs por medio de pandas
-        return pd.read_csv(f"{self.namespace}/{fileName}")
+        return pd.read_csv(f"{fileName}")
     
     def write(self, fileName: str, set: Set) -> DataFrame:
         # Escribimos csvs por medio de pandas, ocupamos composicion para hacer uso de nuesta clase Set
-        return set.returnSet().to_csv(f"{self.namespace}/{fileName}",index=False)
+        set.returnSet().to_csv(f"{fileName}",index=False)
+        return pd.read_csv(f"{fileName}")
