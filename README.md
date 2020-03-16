@@ -17,6 +17,8 @@ If you dont have ```pip3``` installed in your system and you are using a Debian 
 
 In order to install ```pip``` for any other OS, please refer to the following [link.](https://pip.pypa.io/en/stable/installing/)
 
+Class diagrams were drawn with Lucidchart, please refer to the links of each assignment.
+
 ### A1 
 
 Implementation of standard deviation using a linked list. In order to run please checkout to the **A1** branch.
@@ -30,4 +32,4 @@ Class diagram is available [here.](https://www.lucidchart.com/invitations/accept
 ### A3
 Implementation of standard deviation using a linked list using data from a csv file. In order to run please checkout to the **master** branch
 
-Class diagram is available at https://www.lucidchart.com/invitations/accept/4f114a74-438d-43cc-b3b8-c0ee99f28dee
+Class diagram is available [here.](https://www.lucidchart.com/invitations/accept/4f114a74-438d-43cc-b3b8-c0ee99f28dee)
