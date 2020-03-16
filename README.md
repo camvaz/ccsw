@@ -19,7 +19,7 @@ In order to install ```pip``` for any other OS, please refer to the following [l
 
 ### A1 
 
-Implementation of standard deviation using a linked list. In order to run please checkout to the ***A1*** branch.
+Implementation of standard deviation using a linked list. In order to run please checkout to the **A1** branch.
 
 ### A2 
 Read/Write of a csv file through user inputs. In order to run please checkout to the **A2** branch.
