@@ -1,8 +1,9 @@
 import sys
 from FileIO import FileIO
-from Set import Set
+from models.Set import Set
 
 if __name__ == "__main__":
+    # Declaring variables
     opc: str
     io: FileIO = FileIO("./data")
     conjunto: Set = Set()

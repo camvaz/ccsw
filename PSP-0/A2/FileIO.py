@@ -2,8 +2,8 @@ import pandas as pd
 import sys
 from pandas import DataFrame
 
-sys.path.insert(1, "./models")
-import Set
+# sys.path.insert(1, "./models")
+from models.Set import Set
 
 class FileIO:
     namespace: str
