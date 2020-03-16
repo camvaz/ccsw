@@ -1,6 +1,5 @@
-import sys
-from FileIO import FileIO
-from models.Set import Set
+from A2.FileIO import FileIO
+from A2.models.Set import Set
 
 if __name__ == "__main__":
     # Declaring variables
@@ -27,9 +26,9 @@ if __name__ == "__main__":
                         |__>            || ||      || ||
     """)
 
-    fileName = input("Introduzca el nombre del archivo: ")
     print("PSP A2\n\n\n".center(53))
-    print("Read: r\nWrite: w\nPruevas: t")
+    fileName = input("Introduzca el nombre del archivo: ")
+    print("Read: r\nWrite: w\nPruebas: t")
     opc = input("> ")
 
     if(opc == "r"):

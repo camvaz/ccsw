@@ -1,5 +1,5 @@
 import unittest
-from stats import Stats
+from A1.stats import Stats
 
 class StatsTests(unittest.TestCase):
     def setUp(self):

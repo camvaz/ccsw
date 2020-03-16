@@ -1,6 +1,6 @@
 import math
-from LinkedList import LinkedList
-from Node import Node
+from A1.LinkedList import LinkedList
+from A1.Node import Node
 
 class Stats:
     def __init__(self, data: list):
@@ -24,6 +24,7 @@ class Stats:
         while(ref != None):
             sum += pow(ref.data-mean,2)
             ref = ref.next
+
         return sum
 
     def standardDeviation(self):
