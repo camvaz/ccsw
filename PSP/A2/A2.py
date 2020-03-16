@@ -1,5 +1,5 @@
-from A2.FileIO import FileIO
-from A2.models.Set import Set
+from FileIO import FileIO
+from models.Set import Set
 
 if __name__ == "__main__":
     # Declaring variables
