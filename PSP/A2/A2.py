@@ -5,6 +5,7 @@ from tkinter.filedialog import askopenfilename
 
 if __name__ == "__main__":
     # Declaring variables
+    Tk().withdraw() 
     opc: str
     io: FileIO = FileIO("./data")
     conjunto: Set = Set()
@@ -35,12 +36,14 @@ if __name__ == "__main__":
     if(opc == "r"):
         fileName = askopenfilename()
         # Si el usuario pilde leer, FileIO realiza la lectura por medio de pandas
-        print(io.read(f"./reads/{fileName}.csv"))
+        print(io.read(fileName))
     
     if(opc == "w"):
         # Escritura
         fileName = input("Introduzca el nombre del archivo: ")
         items: int
+        f=open(f"{fileName}.csv", "w")
+        f.close()
         # Leemos cantidad a escribir
         items = int(input("introduzca el numero de datos: "))
         while(items > 0):
