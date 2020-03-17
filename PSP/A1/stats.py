@@ -1,6 +1,6 @@
 import math
-from A1.LinkedList import LinkedList
-from A1.Node import Node
+from LinkedList import LinkedList
+from Node import Node
 
 class Stats:
     def __init__(self, data: list):
