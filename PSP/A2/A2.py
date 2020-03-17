@@ -1,5 +1,7 @@
 from FileIO import FileIO
 from models.Set import Set
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
 
 if __name__ == "__main__":
     # Declaring variables
@@ -31,7 +33,7 @@ if __name__ == "__main__":
     opc = input("> ")
 
     if(opc == "r"):
-        fileName = input("Introduzca el nombre del archivo: ")
+        fileName = askopenfilename()
         # Si el usuario pilde leer, FileIO realiza la lectura por medio de pandas
         print(io.read(f"./reads/{fileName}.csv"))
     
