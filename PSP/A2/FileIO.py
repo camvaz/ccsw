@@ -3,7 +3,7 @@ import pandas as pd
 # Importamos DataFrame para usar tipado
 from pandas import DataFrame
 # Importamos nuestra clase set
-from A2.models.Set import Set
+from models.Set import Set
 
 class FileIO:
     namespace: str
