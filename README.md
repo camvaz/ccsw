@@ -21,10 +21,10 @@ Class diagrams were drawn with Lucidchart, please refer to the links of each ass
 
 ### A1 
 
-Implementation of standard deviation using a linked list. In order to run please checkout to the **A1** branch.
+Implementation of standard deviation using a linked list. In order to run please checkout to the **PSP/A1** branch.
 
 ### A2 
-Read/Write of a csv file through user inputs. In order to run please checkout to the **A2** branch.
+Read/Write of a csv file through user inputs. In order to run please checkout to the **PSP/A2** branch.
 
 Class diagram is available [here.](https://www.lucidchart.com/invitations/accept/91f49a45-eb43-4d72-95ab-37637dcb7fc7)
 
